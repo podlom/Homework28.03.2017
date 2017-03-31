@@ -65,7 +65,7 @@ function getComments() {
         }
     }
 ?>
-<form action="inc/comments.php" method="post">
+<form action="?page=comments" method="post">
     <div>
         <label for="uname">Username *:</label>
         <input required type="text" name="uname">
@@ -76,7 +76,7 @@ function getComments() {
     </div>
     <div>
         <label for="ucomment">Comment *:</label><br>
-        <textarea required name="ucomment" placeholder="Inout your comment"></textarea>
+        <textarea required name="ucomment" placeholder="Input your comment"></textarea>
     </div>
     <input type="submit" value="Ok">
    <div>* - required fields</div>
