@@ -1,11 +1,8 @@
 <?php
-global $siteHeader;
 
+global $siteHeader, $commentsDbFile, $errorMessages;
 $siteHeader = 'Comments';
-
-
 $commentsDbFile = dirname(__FILE__) . DIRECTORY_SEPARATOR . 'comments.dat';
-
 $errorMessages = [];
 
 if (!empty($_POST)) {
@@ -58,12 +55,12 @@ function getComments() {
     }
 }
 
-
     if (!empty($errorMessages)) {
         foreach ($errorMessages as $msg) {
             echo $msg . '<br>';
         }
     }
+
 ?>
 <form action="inc/comments.php" method="post">
     <div>
